@@ -1,0 +1,57 @@
+<%-include ('../partials/header.ejs');%>
+<%-include ('../partials/main_nav.ejs');%>
+
+<!--content for the Add page-->
+<div class = "container">
+    <div class = "row">
+        <div class ="offset-md-3 col-md-6">
+            <br>
+            <br>
+        <h1>Edit Business Contact List</h1>
+        <br>
+        <form class = "form" method="POST">
+            <div class ="form group">
+                <label for="nameTextField">Contact Name:    </label>
+                <input type="text" class="form control"
+                id="nameTextField"
+                placeholder="Enter the contact name"
+                name="name"
+                value="<%=book.name%>"
+                required>
+            </div>
+<br>
+            <div class ="form group">
+                <label for="authorTextField">Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" class="form control"
+                id="authorTextField" maxlength="10"
+                placeholder="Enter the Contact's Number"
+                name="number" 
+                value="<%=book.number%>"
+                required>
+            </div>
+            <br>
+            <div class ="form group">
+                <label for="publishedTextField">Email Address:&nbsp;</label>
+                <input type="email" class="form control"
+                id="publishedTextField"
+                placeholder="Enter the email address"
+                name="email" 
+                value="<%=book.email%>"
+                required>
+            </div>
+
+            <br>
+
+           &nbsp; <button class = "btn btn-primary" type="submit"><i class ="fas fa-edit"></i>submit</button>
+            <a href='/businessList' class="btn btn-warning"><i class="fas fa-undo"></i>cancel</a>  
+        
+        </form>
+        </div>
+        </div>
+    </div>
+
+
+  
+<%- include('../partials/bottom_nav'); -%>
+<%- include('../partials/footer'); -%>
+

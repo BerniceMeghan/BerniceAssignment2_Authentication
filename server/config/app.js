@@ -12,10 +12,12 @@ let flash = require('connect-flash');
 
 
 let mongoose = require('mongoose');
+mongoose.set('strictQuery', true);
 let db=require('./db');
 //point mongoose to the db URI
 mongoose.connect(db.URI);
 let mongoDB = mongoose.connection;
+
 mongoDB.on('error',console.error.bind(console,'connection Error:'));
 mongoDB.once('open',()=>{
   console.log('connected to MongoDB...');
